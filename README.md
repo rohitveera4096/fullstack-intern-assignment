@@ -1,4 +1,4 @@
-# Career Dashboard & Skill Gap Analyzer
+# Career Development
 
 A full-stack web application designed to help developers analyze their current skill set against industry standards, view career roadmaps, and stay updated with the latest technology news via the Hacker News API.
 
@@ -114,16 +114,17 @@ Restart the frontend after updating .env.
 
 The backend provides the following RESTful endpoints:
 
-| Method | Endpoint       | Description                         | Request Body Example                                                       |
-| ------ | -------------- | ----------------------------------- | -------------------------------------------------------------------------- |
-| POST   | /api/skill-gap | Analyzes missing skills for a role. | `{ "targetRole": "Frontend Developer", "currentSkills": ["HTML", "CSS"] }` |
-| POST   | /api/roadmap   | Returns a learning path for a role. | `{ "role": "Backend Developer" }`                                          |
-| GET    | /api/news      | Fetches top 5 tech stories.         | N/A                                                                        |
+| Method | Endpoint        | Description                          | Request Body Example                                                       | Response Example |
+|--------|-----------------|--------------------------------------|----------------------------------------------------------------------------|------------------|
+| POST   | /api/skill-gap  | Analyzes missing skills for a role.  | `{ "targetRole": "Frontend Developer", "currentSkills": ["HTML", "CSS"] }` | `{ "success": true, "data": { "matchedSkills": [...], "missingSkills": [...], "recommendations": "Start learning ...", "suggestedLearningOrder": [...] } }` |
+| POST   | /api/roadmap    | Returns a learning roadmap.          | `{ "role": "Backend Developer" }`                                          | `{ "success": true, "roadmap": ["Phase 1: ...", "Phase 2: ...", "Phase 3: ..."] }` |
+| GET    | /api/news       | Fetches top 5 tech stories.          | N/A                                                                        | `[ { "id": 123, "title": "Story", "url": "https://...", "by": "author" }, ... ]` |
+
 
 ---
+## 📝 Assumptions & Logic
 
-
-## 🙌 Acknowledgements
-
-This project was developed as part of the **Full Stack Developer Intern Assignment** at **CodeAtRandom AI**.  
-Special thanks to the team for providing clear instructions and an interesting problem statement.
+- **Case-Insensitive Matching:** All role names and skills are normalized to lowercase for accurate comparison.
+- **Static Role Definitions:** A predefined skill list is used for assignment consistency.
+- **Optimized News Fetching:** Top Hacker News IDs are fetched, and the first 5 valid stories are returned.
+- **CORS Enabled:** Ensures seamless communication between the deployed frontend and backend
