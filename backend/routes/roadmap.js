@@ -12,6 +12,16 @@ const roadmaps = {
     { phase: 1, title: "Node + Express", items: ["REST APIs","Middleware","Routing"] },
     { phase: 2, title: "Databases & Auth", items: ["SQL/NoSQL","JWT","OAuth"] },
     { phase: 3, title: "Scale & Security", items: ["Caching","Testing","Deployment"] }
+  ],
+  "frontend developer": [
+    { phase: 1, title: "Core HTML/CSS/JS", items: ["Semantic HTML","Responsive CSS","Vanilla JS"] },
+    { phase: 2, title: "Frameworks & Tooling", items: ["React", "State Management", "Build Tools"] },
+    { phase: 3, title: "Advanced & Interview Prep", items: ["Performance", "Testing", "System Design"] }
+  ],
+  "backend developer": [
+    { phase: 1, title: "Node + Express", items: ["REST APIs","Middleware","Routing"] },
+    { phase: 2, title: "Databases & Auth", items: ["SQL/NoSQL","JWT","OAuth"] },
+    { phase: 3, title: "Scale & Security", items: ["Caching","Testing","Deployment"] }
   ]
 };
 
