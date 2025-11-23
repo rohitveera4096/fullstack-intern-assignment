@@ -4,7 +4,9 @@ const router = express.Router();
 // Predefined role for required skills
 const roles = {
   "Frontend Developer": ["HTML", "CSS", "JavaScript", "React", "Git"],
-  "Backend Developer": ["Java", "Spring Boot", "SQL", "APIs", "Git"]
+  "Backend Developer": ["Java", "Spring Boot", "SQL", "APIs", "Git"],
+  "frontend developer": ["HTML", "CSS", "JavaScript", "React", "Git"],
+  "backend developer": ["Java", "Spring Boot", "SQL", "APIs", "Git"]
 };
 
 //checking purpose
