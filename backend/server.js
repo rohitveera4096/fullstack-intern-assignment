@@ -5,7 +5,14 @@ const PORT = 4000;
 
 //read json data from incoming requests
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://fullstack-intern-assignment-bice.vercel.app"
+  ],
+  methods: "GET,POST",
+  credentials: true
+}));
 
 // Routes
 const skillGapRoute = require('./routes/skillGap');
