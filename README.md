@@ -121,3 +121,9 @@ The backend provides the following RESTful endpoints:
 | GET    | /api/news      | Fetches top 5 tech stories.         | N/A                                                                        |
 
 ---
+
+
+## 🙌 Acknowledgements
+
+This project was developed as part of the **Full Stack Developer Intern Assignment** at **CodeAtRandom AI**.  
+Special thanks to the team for providing clear instructions and an interesting problem statement.
