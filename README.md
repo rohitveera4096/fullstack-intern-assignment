@@ -13,12 +13,12 @@ A full-stack web application designed to help developers analyze their current s
 
 ---
 
-## Features
+## 🚀 Features
 
 * **🧠 Skill Gap Analysis**
     * Enter your target role and current skills. The system returns:
-        * Matched skills ✔️
-        * Missing skills ❌
+        * Matched skills 
+        * Missing skills 
         * Single-line learning recommendation
         * Suggested learning order
 
